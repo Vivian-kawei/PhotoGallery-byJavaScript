@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>海报画廊</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" >
+	</head>
+	<body onselectstart="return flase;">
+	<div class="wrap" id="wrap">
+		<!--photo负责 平移、旋转-->
+		<div class="photo photo_front " onclick="turn(this)" 
+		id="photo_{{index}}">
+			<!--photo-wrap负责翻转 css3perspective 属性 -->
+			<div class="photo-wrap">
+				<div class="side side-front">
+					<p class="image"><img src="photo/{{img}}" alt=""/></p>
+					<p class="caption">{{caption}}</p>
+				</div>
+				<div class="side side-back">
+					<p class="desc">{{desc}}</p>
+				</div>
+			</div>
+			
+		</div>
+	 
+	</div>
+	<script type="text/javascript" src="photo/data.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>	
+	</body>
+</html>
